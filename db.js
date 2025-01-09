@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const mongoURL = "mongodb://localhost:27017/Bookexchange";
+const mongoURL = 'mongodb+srv://tharun:Nur@ht123@cluster0.urhba.mongodb.net';
 mongoose.connect(mongoURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
