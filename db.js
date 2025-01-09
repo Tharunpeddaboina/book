@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
-const mongoURL = 'mongodb+srv://tharun:nuraht@cluster0.urhba.mongodb.net'
+require("dotenv").config();
+
+const mongoURL = process.env.MONGODB_URI;
+
 mongoose.connect(mongoURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -16,4 +19,4 @@ db.on("error", (err) => {
 db.on("disconnected", () => {
   console.log("mongodb disconnected");
 });
-module.exports=db;
+module.exports = db;
