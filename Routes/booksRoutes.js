@@ -20,7 +20,7 @@ router.get("/search", async (req, res) => {
 
 // Route to post a book (requires authentication)
 router.post("/post", async (req, res) => {
-  const { title, author, condition, price, genre, location, contact, transactionType } = req.body;
+  const { title, author, condition, price, genre, location, transactionType } = req.body;
 
   try {
     const newBook = new Book({
@@ -30,7 +30,6 @@ router.post("/post", async (req, res) => {
       price,
       genre,
       location,
-      contact,
       transactionType,
       userId: null,  // Use the user._id from authenticated request
     });
